@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+body{
+    background: aqua;
+    width: 100%;
+    height:  100vh;
+}
+.navbar{
+    display: flex;
+    padding: 20px 12px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: aliceblue;
+    height: 60px;
+}
+.navbar .logo{
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+.navbar .links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+.navbar .links a{
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+}
+.navbar .links a:hover{
+    color: aqua;
+}
+.navbar .login-btn{
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    color: black;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.navbar .login-btn:hover{
+    background-color: aqua;
+}
+.show-popup .formPopup{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.1s;
+}
+.formPopup{
+    position: fixed;
+    background: white;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    max-width: 720px;
+    width: 100%;
+    border-radius: 20px;
+}
+.formPopup .close-btn{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.formPopup .formBox{
+    display: flex;
+}
+.formBox .formDetails{
+    max-width: 330px;
+    width: 100%;
+    color: white;
+    display: flex;
+    padding: 0 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: yellowgreen;
+    border-radius: 20px 0 0 20px;
+}
+.formBox h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.formBox .formContent{
+    width: 100%;
+    padding: 35px;
+}
+form .inputField{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+form .inputField input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid #414141;
+}
+.inputField input:focus {
+    border-color: aquamarine;
+}
+.inputField input:is(:focus, :valid){
+    padding: 16px 15px 0;
+}
+form .inputField label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #414141;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+.inputField input:is(:focus, :valid) ~ label{
+    color: aquamarine;
+    font-size: 0.75rem;
+    transform: translateY(-120%);
+}
+.formBox a{
+    color: aquamarine;
+    text-decoration: none;
+}
+.formBox a:hover{
+    text-decoration: underline;
+}
+.formBox :where(.forgotPass, .policy-text) {
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+form button {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 3px;
+    margin: 25px 0;
+    color: white;
+    cursor: pointer;
+    background: aquamarine;
+    border-radius: 3px;
+}
+form button:hover{
+    background: aquamarine;
+}
+.formBox .signUp{
+    text-align: center;
+}
+.formPopup .signUp,
+.formPopup.show-signup .login{
+    display: none;
+}
+.formPopup.show-signup .signup{
+    display: flex;
+}
+.policy-text{
+    display: flex;
+    align-items: center;
+}
+.policy-text input{
+    width: 14px;
+    height: 19px;
+    margin-right: 7px;
+}
+@media (max-width: 760px) {
+    .formPopup {
+        width: 95%;
+    }
+    .formBox .formDetails{
+        display: none;
+    }
+
+    .formBox .formContent {
+        padding: 30px 20px;
+    }
+}
