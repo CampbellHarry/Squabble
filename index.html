@@ -29,74 +29,71 @@
     <div class="formPopup">
         <span class="close-btn material-symbols-outlined">
             close
-            </span>
-        <div class="formBox login">
-        <div class="formDetails">
-            <h2>Welcome Back</h2>
-            <p>Please complete the needed details to login.</p>
-        </div>
-        <div class="formContent">
-            <h2>LOGIN</h2>
-            <form action="#">
-                <div class="inputField">
-                    <input type="text" required>
-                    <label>Email</label>
+        </span>
+        <div class="formBox login" id="loginPopup">
+            <div class="formDetails">
+                <h2>Welcome Back</h2>
+                <p>Please complete the needed details to login.</p>
+            </div>
+            <div class="formContent">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="inputField">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="inputField">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <!--<div class="inputField">
+                        <input type="date" required>
+                        <label>D.O.B</label>
+                    </div>-->
+                    <a href="#" class="forgotPass">Forgot Password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="signup">
+                    Don't have an account?
+                    <a href="#" id="signupLink">Sign Up</a>
                 </div>
-                <div class="inputField">
-                    <input type="password" required>
-                    <label >Password</label>
-                </div>
-                <!--<div class="inputField">
-                    <input type="date" required>
-                    <label>D.O.B</label>
-                </div>-->
-            <a href="#" class="forgotPass">Forgot Password?</a>
-            <button type="submit">Log In</button>
-            </form>
-            <div class="signup">
-                Don't have an account?
-                <a href="#" id="signupLink">Sign Up</a>
             </div>
         </div>
-        </div>
-        <div class="formBox signUp">
-        <div class="formDetails">
-            <h2>Create Account</h2>
-            <p>Please complete the needed details to signup.</p>
-        </div>
-        <div class="formContent">
-            <h2>SIGNUP</h2>
-            <form action="#">
-                <div class="inputField">
-                    <input type="text" required>
-                    <label>Email</label>
-                </div>
-                <div class="inputField">
-                    <input type="password" required>
-                    <label >Create Password</label>
-                </div>
-                
-                <div class="inputField">
-                    <input type="date" required>
-                    <!--<label>D.O.B</label>-->
-                </div>
-                <div class="policy-text">
+        <div class="formBox signUp" id="signUpPopUp">
+            <div class="formDetails">
+                <h2>Create Account</h2>
+                <p>Please complete the needed details to signup.</p>
+            </div>
+            <div class="formContent">
+                <h2>SIGNUP</h2>
+                <form action="#">
+                    <div class="inputField">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="inputField">
+                        <input type="password" required>
+                        <label>Create Password</label>
+                    </div>
+                    <div class="inputField">
+                        <input type="date" required>
+                        <!--<label>D.O.B</label>-->
+                    </div>
+                    <div class="policy-text">
                         <input type="checkbox" id="policy">
                         <label for="policy">
                             I agree to the
                             <a href="#">Terms & Conditions</a>
                         </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="signup">
+                    Already have an account?
+                    <a href="#" id="loginLink">Login</a>
                 </div>
-            <a href="#" class="forgotPass">Forgot Password?</a>
-            <button type="submit">Sign Up</button>
-            </form>
-            <div class="signup">
-                Already have an account?
-                <a href="#" id="loginLink">Login</a>
             </div>
         </div>
-        </div>
     </div>
-
 </body>
 </html>
